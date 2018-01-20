@@ -2,15 +2,36 @@
 
   <PropertyGroup>
     <TargetFramework>netstandard2.0</TargetFramework>
+    <Version>1.0.0</Version>
+    <Description>this is a customized swagger for a better compatibility with asp.net api, should work well with autorest
+      services.AddSwaggerGen(options =&gt;
+      {
+        //options
+      });
+      app.UseSwagger(options =&gt;
+      {
+        //options
+      });
+    </Description>
+    <Copyright>Microex</Copyright>
+    <PackageTags>microex,swagger,swaggerui</PackageTags>
+    <PackageLicenseUrl>https://github.com/snys98/Microex.Swagger</PackageLicenseUrl>
+    <PackageProjectUrl>https://github.com/snys98/Microex.Swagger</PackageProjectUrl>
+    <RepositoryUrl>https://github.com/snys98/Microex.Swagger</RepositoryUrl>
+    <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
+    <PackageIconUrl>https://avatars0.githubusercontent.com/u/11873100?s=400&amp;u=da243f6643833e9b509690bc0297507116eeafa1&amp;v=4</PackageIconUrl>
+    <RepositoryType>github</RepositoryType>
+    <PackageReleaseNotes>add extensions for md5 hash compute</PackageReleaseNotes>
+    <Authors>Microex</Authors>
+    <Product>Microex</Product>
+    <ApplicationIcon />
+    <OutputType>Library</OutputType>
+    <StartupObject />
   </PropertyGroup>
 
-  <ItemGroup>
-    <None Remove="SwaggerUI\index.html" />
-  </ItemGroup>
-
-  <ItemGroup>
-    <EmbeddedResource Include="SwaggerUI\index.html" />
-  </ItemGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
+    <LangVersion>7</LangVersion>
+  </PropertyGroup>
 
   <ItemGroup>
     <PackageReference Include="Microex.Common" Version="1.2.5" />
@@ -24,6 +45,10 @@
 
   <ItemGroup>
     <ProjectReference Include="..\Microex.Swagger.SwaggerGen\Microex.Swagger.SwaggerGen.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <EmbeddedResource Include=".\SwaggerUI\index.html" />
   </ItemGroup>
 
 </Project>

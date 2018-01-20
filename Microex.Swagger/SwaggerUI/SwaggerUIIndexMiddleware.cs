@@ -39,6 +39,7 @@ namespace Microex.Swagger.SwaggerUI
             response.StatusCode = 200;
             response.ContentType = "text/html";
 
+
             using (var stream = _options.IndexStream())
             {
                 // Inject parameters before writing to response
@@ -49,7 +50,7 @@ namespace Microex.Swagger.SwaggerUI
                 }
 
                 await response.WriteAsync(htmlBuilder.ToString(), Encoding.UTF8);
-            }
+            }            
         }
 
         private IDictionary<string, string> GetIndexParameters()

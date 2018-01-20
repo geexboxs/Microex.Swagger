@@ -5,11 +5,11 @@ using Microsoft.Extensions.FileProviders;
 
 namespace Microex.Swagger.SwaggerUI
 {
-    internal static class SwaggerUIBuilderExtensions
+    public static class SwaggerUIBuilderExtensions
     {
         private const string EmbeddedFilesNamespace = "Microex.Swagger.SwaggerUI";
 
-        internal static IApplicationBuilder UseSwaggerUI3(
+        public static IApplicationBuilder UseSwaggerUI3(
             this IApplicationBuilder app,
             Action<SwaggerUIOptions> setupAction)
         {

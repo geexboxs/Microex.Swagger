@@ -2,6 +2,24 @@
 
   <PropertyGroup>
     <TargetFramework>netstandard2.0</TargetFramework>
+    <Version>1.0.0</Version>
+    <Description>base generator assembly for microex.swagger
+    </Description>
+    <Copyright>Microex</Copyright>
+    <PackageTags>microex,swagger,swaggergen</PackageTags>
+    <PackageLicenseUrl>https://github.com/snys98/Microex.Swagger</PackageLicenseUrl>
+    <PackageProjectUrl>https://github.com/snys98/Microex.Swagger</PackageProjectUrl>
+    <RepositoryUrl>https://github.com/snys98/Microex.Swagger</RepositoryUrl>
+    <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
+    <PackageIconUrl>https://avatars0.githubusercontent.com/u/11873100?s=400&amp;u=da243f6643833e9b509690bc0297507116eeafa1&amp;v=4</PackageIconUrl>
+    <RepositoryType>github</RepositoryType>
+    <PackageReleaseNotes></PackageReleaseNotes>
+    <Authors>Microex</Authors>
+    <Product>Microex</Product>
+  </PropertyGroup>
+
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
+    <LangVersion>7</LangVersion>
   </PropertyGroup>
 
   <ItemGroup>

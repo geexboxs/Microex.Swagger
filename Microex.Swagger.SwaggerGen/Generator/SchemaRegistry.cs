@@ -144,7 +144,7 @@ namespace Microex.Swagger.SwaggerGen.Generator
                     {
                         var display = x.GetType().GetMember(x.ToString()).First().GetCustomAttribute<DisplayAttribute>(true);
                         var name = camelCase ? x.ToString().ToCamelCase() : x.ToString();
-                        return new {Name = name, Value = display?.Name ?? name, display?.Description};
+                        return new {Name = display?.Name, Value = name, display?.Description};
                     }
                 );
                 schema.Extensions.Add("x-ms-enum", new { type.Name, ModelAsString = false, Values = enumValues });
