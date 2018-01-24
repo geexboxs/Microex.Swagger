@@ -147,7 +147,7 @@ namespace Microex.Swagger.SwaggerGen.Generator
                         return new {Name = display?.Name, Value = name, display?.Description};
                     }
                 );
-                schema.Extensions.Add("x-ms-enum", new { type.Name, ModelAsString = false, Values = enumValues });
+                //schema.Extensions.Add("x-ms-enum", new { type.Name, ModelAsString = false, Values = enumValues });
                 //schema.AdditionalProperties = new Schema()
                 //{
                 //    Type = "string",
